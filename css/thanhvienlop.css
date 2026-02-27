@@ -1,0 +1,109 @@
+main {
+  min-height: 100vh;
+  background: linear-gradient(
+    351deg,
+    rgba(252, 175, 98, 1) 0%,
+    rgba(237, 217, 175, 1) 79%,
+    rgba(242, 226, 182, 1) 100%
+  );
+}
+.titlethanhvienlop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh 0;
+
+  font-size: 3vw;
+  font-family: "SVN-Dancing Script";
+  color: #f16d34;
+}
+.thanhvien {
+  margin: 5vh 7vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  /* grid-gap: 0.5vh 0.5vw; */
+  justify-items: center;
+  align-items: center;
+}
+.co {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+}
+.stt41 {
+  grid-column: 2 / 3;
+  grid-row: 10 / 11;
+}
+.stt42 {
+  grid-column: 3 / 4;
+  grid-row: 10 / 11;
+}
+.stt43 {
+  grid-column: 4 / 5;
+  grid-row: 10 / 11;
+}
+.anhco {
+  width: 15vw;
+  border-radius: 10%;
+}
+.thanhvien > div {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  row-gap: 0.1vh;
+  position: relative;
+}
+.thanhvien img:not(.anhco) {
+  width: 11vw;
+  border-radius: 10%;
+  margin-bottom: 0.2vh;
+  display: block;
+}
+.thanhvien h5,
+.thanhvien h6 {
+  font-family: "Times New Roman", Times, serif;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(20%);
+  width: 90%;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s,
+    transform 0.3s;
+  margin: 0;
+  padding: 0.2em 0.5em;
+  pointer-events: none;
+}
+
+.thanhvien h5 {
+  bottom: 2.5em;
+  font-size: 1.1vw;
+  font-weight: bold;
+}
+.thanhvien h6 {
+  bottom: 1em;
+  font-size: 0.9vw;
+}
+.thanhvien > div:hover h5,
+.thanhvien > div:hover h6 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.thanhvien > div img {
+  transition: all 0.3s ease-in-out;
+}
+.thanhvien > div:hover img {
+  transform: scale(1.1);
+}
+.thanhvien > div h5,
+.thanhvien > div h6 {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
